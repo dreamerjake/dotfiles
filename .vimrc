@@ -133,7 +133,7 @@ au BufNewFile,BufRead *.py
 
 " Full stack filetype indentation
 " ###############################
-au BufNewFile,BufRead *.js, *.html, *.css
+au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
@@ -165,8 +165,6 @@ set noswapfile
 " Powerline
 " #########
 " Settings for vim-powerline
-" cd ~/.vim/bundle
-" git clone git://github.com/Lokaltog/vim-powerline.git
 set laststatus=2
 
 " Folding
