@@ -73,8 +73,10 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " mkdir -p ~/.vim/colors && cd ~/.vim/colors
 " wget <colorscheme>
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
+" wget https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim
 set t_co=256
-color wombat256mod
+" color wombat256mod
+color badwolf
 
 " Enable Syntax Highlighting
 " ##########################
