@@ -29,6 +29,10 @@ filetype off
 " Flake8 Install
 " ##############
 " python -m pip install flake8
+" set max line length to 120 (instead of 80)
+" ~/.config/flake8
+" [flake8]
+" max-line-length = 120
 
 " Vundle Stuff
 " ############
