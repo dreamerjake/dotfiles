@@ -6,6 +6,14 @@ filetype off
 
 " YouCompleteMe install guide
 " https://valloric.github.io/YouCompleteMe/#full-installation-guide
+" <Install vim from source>
+" sudo apt-get install cmake
+" cd ~
+" mkdir ycm_build
+" cd ycm_build
+" cmake -G "<generator>" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+" cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+" cmake --build . --target ycm_core --config Release
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
