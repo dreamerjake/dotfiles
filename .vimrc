@@ -142,3 +142,12 @@ EOF
 " File Browsing
 " hide pyc files
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+" quit NERDTree if it's the only thing open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" NERDTree dir arrows compatible with putty
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
+" Toggle NERDTree with F10
+map <F10> :NERDTreeToggle<CR>
+" Current file in nerdtree
+map <F9> :NERDTreeFind<CR>
