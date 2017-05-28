@@ -2,9 +2,11 @@ set nocompatible
 filetype off
 
 " Set up Vundle:
+" ##############
 " $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 " YouCompleteMe install guide
+" ###########################
 " https://valloric.github.io/YouCompleteMe/#full-installation-guide
 " <Install vim from source>
 " sudo apt-get install cmake
@@ -15,6 +17,8 @@ filetype off
 " cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 " cmake --build . --target ycm_core --config Release
 
+" Vundle Stuff
+" ############
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -42,17 +46,21 @@ filetype plugin indent on    " required
 
 
 " Automatic reloading of .vimrc
+" #############################
 autocmd! bufwritepost .vimrc source %
 
 " Better copy and paste
+" #####################
 set pastetoggle=<F3>
 set clipboard=unnamed
 
 " Mouse and backspace
+" ###################
 set mouse=a
 set bs=2
 
 " Show trailing whitespace
+" ########################
 " Must be inserted before the colorscheme command
 " autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 " au InsertLeave * match ExtraWhitespace /\s\+$/
@@ -60,19 +68,22 @@ highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 
-" Color scheme
+" Color Scheme
+" ############
 " mkdir -p ~/.vim/colors && cd ~/.vim/colors
 " wget <colorscheme>
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 set t_co=256
 color wombat256mod
 
-" Enable syntax highlighting
+" Enable Syntax Highlighting
+" ##########################
 " You need to reload this file for the change to apply
 let python_highlight_all=1
 syntax on
 
-" Showing line numbers and length
+" Line Numbering and Length
+" ###############################
 set relativenumber
 set number
 set tw=79  " width of document
@@ -81,14 +92,8 @@ set fo-=t  " don't automatically wrap text when typing
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
 
-" Spaces not tabs
-" set tabstop=4
-" set softtabstop=4
-" set shiftwidth=4
-" set shiftround
-" set expandtab
-
 " PEP8 indentation
+" ################
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
     \ set softtabstop=4 |
@@ -99,34 +104,45 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix |
 
 " Full stack filetype indentation
+" ###############################
 au BufNewFile,BufRead *.js, *.html, *.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
 
+" Search
+" ######
 " Make search case insensitive
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase 
 
+" Backup and Swap Files
+" #####################
 " Disable backup and swap files
 " They trigger too many events for file system watchers
 set nobackup
 set nowritebackup
 set noswapfile
 
+" Pathogen
+" ########
 " Setup Pathogen to manage your plugins
 " mkdir -p ~/.vim/autoload ~/.vim/bundle
 " curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 " Now you can install any plugin into a .vim/bundle/plugin-name/ folder
 " call pathogen#infect()
 
+" Powerline
+" #########
 " Settings for vim-powerline
 " cd ~/.vim/bundle
 " git clone git://github.com/Lokaltog/vim-powerline.git
 set laststatus=2
 
+" Folding
+" #######
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
@@ -134,15 +150,18 @@ set foldlevel=99
 nnoremap <space> za
 
 " UTF8 Support
+" ############
 set encoding=utf-8
 
-" Autocomplete stuff
+" Autocomplete
+" ############
 " ensure the autocomplete window goes away when done
 let g:ycm_autoclose_preview_window_after_completion=1
 " map goto definition to space-g
 map <leader>g  :YcmCompleter GoToDefinition<CR>
 
 " Virtualenv Support
+" ##################
 "python with virtualenv support
 py << EOF
 import os
@@ -154,6 +173,7 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 " File Browsing
+" #############
 " hide pyc files
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 " quit NERDTree if it's the only thing open
