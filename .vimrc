@@ -78,6 +78,12 @@ set t_co=256
 " color wombat256mod
 color badwolf
 
+" Turn off HTML link underlining
+" let g:badwolf_html_link_underline = 0
+
+" Turn on CSS properties highlighting
+" let g:badwolf_css_props_highlight = 1
+
 " Enable Syntax Highlighting
 " ##########################
 " You need to reload this file for the change to apply
