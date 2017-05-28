@@ -1,6 +1,15 @@
 set nocompatible
 filetype off
 
+" F-Keys Current Bindings
+" #######################
+" F2    
+" F3    Toggle Paste
+" F7    Flake8 Scan
+" F9    NERDTree Find
+" F10:  Toggle NERDTree
+" SPACE Fold
+
 " Set up Vundle:
 " ##############
 " $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -16,6 +25,10 @@ filetype off
 " cmake -G "<generator>" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 " cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 " cmake --build . --target ycm_core --config Release
+
+" Flake8 Install
+" ##############
+" python -m pip install flake8
 
 " Vundle Stuff
 " ############
