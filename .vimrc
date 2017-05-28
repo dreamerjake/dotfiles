@@ -3,12 +3,12 @@ filetype off
 
 " F-Keys Current Bindings
 " #######################
-" F2    
-" F3    Toggle Paste
-" F7    Flake8 Scan
-" F9    NERDTree Find
-" F10:  Toggle NERDTree
-" SPACE Fold
+" F-2    
+" F-3    Toggle Paste
+" F-7    Flake8 Scan
+" F-9    NERDTree Find
+" F-10   Toggle NERDTree
+" SPACE  Fold
 
 " Set up Vundle:
 " ##############
