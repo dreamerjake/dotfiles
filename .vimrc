@@ -3,7 +3,7 @@ filetype off
 
 " F-Keys Current Bindings
 " #######################
-" F-2    
+" F-2    Toggle Line Numbering
 " F-3    Toggle Paste
 " F-7    Flake8 Scan
 " F-9    NERDTree Find
@@ -112,6 +112,8 @@ set nowrap " don't automatically wrap on load
 set fo-=t  " don't automatically wrap text when typing
 set colorcolumn=80
 highlight ColorColumn ctermbg=16
+" Map num/relativenum toggling to F-2
+nmap <silent> <F2> :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
 
 " PEP8 indentation
 " ################
