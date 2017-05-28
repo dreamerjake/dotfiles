@@ -18,6 +18,7 @@ filetype off
 " ###########################
 " https://valloric.github.io/YouCompleteMe/#full-installation-guide
 " <Install vim from source>
+" https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source
 " sudo apt-get install cmake
 " cd ~
 " mkdir ycm_build
